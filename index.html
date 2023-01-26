@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+    <style>
+        .amazing {
+            aspect-ratio: 3 / 2;
+        }
+
+        .just-joke, .just-jokee, .just-jokeee {
+            display: none;
+        }
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <div class="row">
+            <h1 class="h3 text-center mb-5">Movies catalog</h1>
+            <div class="col-12 col-lg-4">
+                <div class="sticky-top">
+                    <form action="https://echo.htmlacademy.ru">
+                        <input type="text" title="search" class="form-control mb-3" id="search" placeholder="Search" name="movie--name">
+                    
+                        <input type="number" class="form-control mb-3" id="email" placeholder="Rating" name="rating" step="0.1" min="0" max="10">
+                    
+                        <select class="form-select mb-3" name="category" title="category">
+                            <option value="All">All</option>
+                            <option value="Action">Action</option>
+                            <option value="Strategy">Strategy</option>
+                            <option value="War">War</option>
+                        </select>
+                    
+                        <select class="form-select mb-3" name="sorting" title="sorting">
+                            <option value="Rating (high to low)">Rating (high to low)</option>
+                            <option value="Rating (low to high)">Rating (low to high)</option>
+                            <option value="Quality (high to low)">Quality (high to low)</option>
+                            <option value="Quality (low to high)">Quality (low to high)</option>
+                        </select>
+                    
+                        <button type="submit" class="btn btn-primary mb-5 w-100">Search</button>
+                    </form>
+                    
+                    <h3 class="h3">Bookmarked movies</h3>
+                    
+                    <ul class="list-unstyled row" id="bookmark-list">
+                        <li class="col-12 border border-secondary bookmark-item">
+                            <p class="mb-2 h6 mt-3 bookmark-title">Avengers: Infinity War</p>
+                    
+                            <button type="button" class="btn btn-danger mb-3 delete-btn">Remove</button>
+                        </li>
+
+                        <li class="col-12 border border-secondary bookmark-item">
+                            <p class="mb-2 h6 mt-3 bookmark-title">Avengers: Infinity War</p>
+                    
+                            <button type="button" class="btn btn-danger mb-3 delete-btn">Remove</button>
+                        </li>
+
+                        <li class="col-12 border border-secondary bookmark-item">
+                            <p class="mb-2 h6 mt-3 bookmark-title">Avengers: Infinity War</p>
+                    
+                            <button type="button" class="btn btn-danger mb-3 delete-btn">Remove</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <h3 class="h4">Search results: <span id="result--number">39</span></h3>
+                
+                <div class="alert alert-primary">Use the form on the left to search for a movie</div>
+                
+                <ul class="list-unstyled row gap-3" id="list">
+                    <li class="col" id="item">
+                        <div class="card" id="template">
+                            <div class="card-body">
+                                <img src="./img/cars.jpg" alt="movies" class="amazing mb-3 img" width="350">
+                                
+                                <p class="mb-2 h5 mt-3 title">Avengers: Infinity War</p>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./img/calendar.svg" alt="calendar icon" width="20" height="20">
+                                    <p class="m-0 date">2018</p>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./img/star.svg" alt="star icon" width="20" height="20">
+                                    <p class="m-0 rating">8.7</p>
+                                </div>
+                                
+                                <div>
+                                    <a href="#" class="btn btn-outline-primary trailer-link" target="blank">Watch trailer</a>
+                                    <button type="button" class="btn btn-outline-secondary">More info</button>
+                                    <button type="button" class="btn btn-outline-success bookmark">Bookmark</button>
+                                </div>
+                            </div>
+                        </div>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/movies.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
